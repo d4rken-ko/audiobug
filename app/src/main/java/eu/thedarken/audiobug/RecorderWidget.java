@@ -14,13 +14,13 @@ public class RecorderWidget extends AppWidgetProvider {
 
     @Override
     public void onEnabled(Context context) {
-        Log.d(TAG, "Widget created");
+        Log.d(TAG, "위젯 생성됨");
         super.onEnabled(context);
     }
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-        Log.d(TAG, "Update");
+        Log.d(TAG, "업데이트");
         Intent intent = new Intent(context, AudioBugService.class);
         intent.setAction(ACTION_TOGGLE_RECORDING);
         PendingIntent myPI = PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -42,7 +42,7 @@ public class RecorderWidget extends AppWidgetProvider {
 
     @Override
     public void onDeleted(Context context, int[] appWidgetIds) {
-        Log.d(TAG, "Widget destroyed!");
+        Log.d(TAG, "위젯이 파괴되었습니다!");
         super.onDeleted(context, appWidgetIds);
     }
 }
