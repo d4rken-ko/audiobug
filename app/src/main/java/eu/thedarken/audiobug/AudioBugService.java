@@ -84,7 +84,7 @@ public class AudioBugService extends Service implements Recorder.RecorderCallbac
             PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
             mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "AudioBug");
             mWakeLock.acquire();
-            Log.d(TAG, "Wakelock aquired");
+            Log.d(TAG, "웨이크록이 인수했습니다");
         }
 
         setupTriggers();
@@ -92,7 +92,7 @@ public class AudioBugService extends Service implements Recorder.RecorderCallbac
         if (mShowServiceNotification) {
             setNotification(false);
         }
-        Log.d(TAG, "ABService running");
+        Log.d(TAG, "ABService 실행 중");
     }
 
     @Override
@@ -114,9 +114,9 @@ public class AudioBugService extends Service implements Recorder.RecorderCallbac
         tearDownTriggers();
         if (mWakeLock != null) {
             mWakeLock.release();
-            Log.d(TAG, "Wakelock released");
+            Log.d(TAG, "웨이크록이 풀려났다");
         }
-        Log.d(TAG, "ABService destroyed");
+        Log.d(TAG, "ABService가 파괴되었습니다");
         cancelNotifications();
         super.onDestroy();
     }
@@ -232,14 +232,14 @@ public class AudioBugService extends Service implements Recorder.RecorderCallbac
         String contentText;
         if (recording) {
             icon = R.drawable.widgetrec;
-            tickerText = "Beginning recording";
-            contentTitle = "AudioBug";
-            contentText = "RECORDING...";
+            tickerText = "녹음 시작";
+            contentTitle = "오디오버그";
+            contentText = "녹음...";
         } else {
             icon = R.drawable.widgetnorm;
-            tickerText = "Waiting for action";
-            contentTitle = "AudioBug";
-            contentText = "IDLE";
+            tickerText = "행동을 기다리며";
+            contentTitle = "오디오버그";
+            contentText = "게으른";
         }
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
