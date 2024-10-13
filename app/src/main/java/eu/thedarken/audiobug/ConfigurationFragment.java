@@ -276,10 +276,10 @@ public class ConfigurationFragment extends Fragment implements ServiceConnection
         MenuItem toggle = menu.findItem(R.id.start);
         if (toggle != null) {
             if (mBinder == null) {
-                toggle.setTitle("Start");
+                toggle.setTitle("시작");
                 toggle.setIcon(R.drawable.ic_action_playback_play);
             } else {
-                toggle.setTitle("Stop");
+                toggle.setTitle("멈추다");
                 toggle.setIcon(R.drawable.ic_action_playback_stop);
             }
         }
