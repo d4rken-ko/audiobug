@@ -29,14 +29,14 @@ public class FollowMeDialogFragment extends DialogFragment {
         dialog.setTitle(getActivity().getString(R.string.follow_darken));
         dialog.setMessage(getActivity().getString(R.string.keep_up_with_recent_developments));
 
-        dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Google+", new DialogInterface.OnClickListener() {
+        dialog.setButton(DialogInterface.BUTTON_POSITIVE, "구글+", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://plus.google.com/116634499773478773276"));
                 startActivity(i);
             }
         });
 
-        dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "Twitter", new DialogInterface.OnClickListener() {
+        dialog.setButton(DialogInterface.BUTTON_NEUTRAL, "지저귀다", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int whichButton) {
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.twitter.com/d4rken"));
                 startActivity(i);
