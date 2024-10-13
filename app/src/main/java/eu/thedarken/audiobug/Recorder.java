@@ -24,7 +24,7 @@ public class Recorder {
     private final RecorderCallback mListener;
 
     public Recorder(Context context, RecorderCallback listener) {
-        Log.d(getClass().getSimpleName(), " created");
+        Log.d(getClass().getSimpleName(), " 생성됨");
         this.mListener = listener;
 
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
@@ -51,7 +51,7 @@ public class Recorder {
 
         mRecordedFile = new File(path, fileName);
 
-        Log.d(TAG, "Recording will be stored in " + mRecordedFile.getAbsolutePath());
+        Log.d(TAG, "녹음은 다음에 저장됩니다 " + mRecordedFile.getAbsolutePath());
         mRecorder = new MediaRecorder();
         mRecorder.reset();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
@@ -77,7 +77,7 @@ public class Recorder {
     }
 
     public void start() {
-        Log.d(getClass().getSimpleName(), "recording now");
+        Log.d(getClass().getSimpleName(), "지금 녹음 중");
         mRecorder.start();
         mListener.onRecordingStarted();
     }
