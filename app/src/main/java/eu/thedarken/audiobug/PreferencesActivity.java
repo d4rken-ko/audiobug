@@ -25,10 +25,10 @@ public class PreferencesActivity extends PreferenceActivity {
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference.getKey().equals("misc.github")) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/d4rken/audiobug")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/d4rken-ko/audiobug")));
             return true;
         } else if (preference.getKey().equals("misc.privacy")) {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/d4rken/audiobug/blob/master/privacy_policy_for_gplay.md")));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/d4rken-ko/audiobug/blob/master/privacy_policy_for_gplay.md")));
             return true;
         } else return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
