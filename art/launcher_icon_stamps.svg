@@ -23,11 +23,11 @@ viewBox="0 0 21000 29700"
     @font-face { font-family:"Arial";src:url("#FontID0") format(svg)}
     .fil7 {fill:#332C2B}
     .fil5 {fill:black}
-    .fil2 {fill:#08FF7F}
-    .fil3 {fill:#8EA3AD}
-    .fil1 {fill:#F44336}
+    .fil2 {fill:#08FF7E}
+    .fil3 {fill:#B8D4E0}
+    .fil1 {fill:#2872C7}
     .fil4 {fill:#FEFEFE}
-    .fil0 {fill:#FFD9DA}
+    .fil0 {fill:#D9ECFF}
     .fil6 {fill:white}
     .fnt0 {font-weight:bold;font-size:846.67px;font-family:'Arial'}
    ]]>
