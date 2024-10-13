@@ -31,7 +31,7 @@ public class ProximityTrigger extends Trigger implements SensorEventListener {
         mProximityTimeout = settings.getInt(KEY_PROXIMITY_TIMEOUT, 500);
         mProximityCount = settings.getInt(KEY_PROXIMITY_COUNT, 3);
 
-        Log.d(TAG, "created with timeout " + mProximityTimeout + " and count " + mProximityCount);
+        Log.d(TAG, "시간 초과로 생성됨 " + mProximityTimeout + " 그리고 세어보세요 " + mProximityCount);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class ProximityTrigger extends Trigger implements SensorEventListener {
                 mTaps++;
                 if (mTaps >= mProximityCount && ((cur - mLastTrigger) > 2000)) {
                     mTaps = 0;
-                    Log.d(TAG, "TRIGGERED!");
+                    Log.d(TAG, "트리거됨!");
                     mLastTrigger = cur;
                     getListener().onTriggered();
                 }
