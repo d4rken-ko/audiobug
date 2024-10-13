@@ -18,14 +18,14 @@
             android:title="@string/service_notification_title" />
         <EditTextPreference
             android:defaultValue=""
-            android:dialogMessage="Storage location"
-            android:dialogTitle="Make sure the path is correct"
+            android:dialogMessage="저장 위치"
+            android:dialogTitle="경로가 올바른지 확인하세요"
             android:inputType="text"
             android:key="general.location"
             android:summary="@string/location_summary"
             android:title="@string/location_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Misc">
+    <PreferenceCategory android:title="기타">
         <PreferenceScreen
             android:icon="@drawable/ic_action_github"
             android:key="misc.github"
